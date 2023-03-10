@@ -1,42 +1,35 @@
-import React, { useState,useEffect } from 'react';
-import axios from 'axios';
+import React, {useState} from 'react';
 import { useRoutes } from 'react-router-dom';
+import { Pays } from './components/pays/pays.js';
+import './App.css'
 
 //importation des composant
-import {Donnee} from './components/donnee/donnee.js'
-import { DonneeInfo } from './components/donneeInfo/donneInfo.js';
+import {Home} from './components/home/home.js';
 
 //composant App
 export const App = () => {
-
-  //les etats de ce composant
-  const [data, setData] = useState([]); //etat qui va stocké les données de l'api
-  const [selectData, setSelectData] = useState(null);//etat qui va stocké les info du donnée selectionné
-
-  //le resultat de la recherche est stocké dans data 
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
-        setData(response.data);
-      })
-  }, []);
-  
+  const [isDarkMode, setIsDarkMode] = useState(false);
   //l'ensemble des routes 
   let routes = useRoutes ([
     {
       path : "/",
-      element : <Donnee data={data} setSelectData={setSelectData}/>
+      element :<Home/>
+      
     }, 
     {
-      path : "/donnee/:id",
-      element : <DonneeInfo data={selectData}  />
+      path : "/countries/:code",
+      element : <Pays/>
     }
     
   ])
-    
   return (
-    <div className="container">
-      {/* affichage des routes */}
+    <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
+      {/* <div className="header"> */}
+        <h1>Where in the World?</h1>
+        <button onClick={() => setIsDarkMode(!isDarkMode)}>
+          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
+      {/* </div> */}
       {routes}
 </div>
   );
