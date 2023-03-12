@@ -47,7 +47,7 @@ export const Home = () => {
 
   return (
     <div className="where">
-      <div className="filters">
+      <div className="filtre">
         <input type="text" placeholder="Search for a country ..." value={recherche} onChange={e => setRecherche(e.target.value)} />
         <select value={choix} onChange={e => setChoix(e.target.value)}>
           <option value="all">All</option>

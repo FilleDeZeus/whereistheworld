@@ -1,4 +1,4 @@
-/* .details {
+.details {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,4 +25,4 @@ margin-bottom: 10px;
 
 .details strong {
 font-weight: bold;
-} */
+}

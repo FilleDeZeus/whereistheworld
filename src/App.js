@@ -25,7 +25,7 @@ export const App = () => {
   return (
     <div className={`container ${isDarkMode ? 'dark-mode' : ''}`}>
       {/* <div className="header"> */}
-        <h1>Where in the World?</h1>
+        <h1 className={` ${isDarkMode ? 'dark-mode' : ''}`}>Where in the World?</h1>
         <button onClick={() => setIsDarkMode(!isDarkMode)}>
           {isDarkMode ? 'Light Mode' : 'Dark Mode'}
         </button>

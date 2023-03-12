@@ -11,13 +11,11 @@ body{
 h1 {
     font-size: 28px;
     font-weight: 800;
-    margin: 40px 0;
     text-align: center;
 }
 .dark-mode {
     background-color: #202c37;
     color: #fff;
-  }
-  
+}
 
-  
+
