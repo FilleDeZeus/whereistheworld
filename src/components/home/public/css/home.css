@@ -1,35 +1,46 @@
 /* Containers */
 .where {
-  margin: 0 auto;
-  max-width: 1280px;
   padding: 1rem;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
-.filters {
+.filtre {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
+select{
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: rgb(145, 145, 145) solid 1px;
+  background-color: white; 
+}
+.dark-mode select{
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: rgb(145, 145, 145) solid 1px;
+  background-color: white; 
+}
 
-/* Search input */
 input[type="text"] {
-  background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  color: #333;
-  font-size: 1rem;
-  padding: 0.5rem;
-  width: 100%;
-  transition: border-bottom-color 0.3s ease-in-out;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white; 
+  border: rgb(145, 145, 145) solid 1px;
+  font-size: 16px;
+  width: 40%;
+  margin-left: 40px;
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"]:focus {
-  border-bottom-color: #6dabe4;
   outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
 }
 
-/* Region select */
 select {
   background-color: transparent;
   border: none;
@@ -40,22 +51,27 @@ select {
   max-width: 150px;
 }
 
-/* Country list */
 ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2rem;
+  margin-top: 50px;
+  
+}
+.dark-mode li {
+  background-color: black;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
 }
 
 li {
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 5px 5px 5px  rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   overflow: hidden;
+  height: 300px;
+  list-style: none;
 }
+
 
 li:hover {
   transform: translateY(-5px);
@@ -66,16 +82,39 @@ li a {
   display: block;
   text-align: center;
   height: 200px;
+  text-decoration: none;
+
 }
 
 li img {
   height: 70%;
   width: 100%;
 }
-
+li h3 {
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+li strong {
+  font-weight: bold;
+  margin: 0;
+  
+}
 li p {
   margin: 0;
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 0.8rem;
+
+}
+
+.textHome{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 15px;
+  color: black;
+}
+.dark-mode .textHome {
+  background-color: black;
+  color: white;
+
 }

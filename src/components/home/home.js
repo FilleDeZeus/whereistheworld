@@ -61,7 +61,12 @@ export const Home = () => {
           <li key={pays.cca3}>
             <Link to={`/countries/${pays.cca3}`}>
               <img src={pays.flags.png} alt={`${pays.name.common} flag`} />
-              <p>{pays.name.common}</p>
+              <div className='textHome'>
+              <h3>{pays.name.common}</h3>
+              <p><strong>Capital:</strong> {pays.capital}</p>
+              <p><strong>Region:</strong> {pays.region}</p>
+              <p><strong>Population:</strong> {pays.population}</p>
+              </div>
             </Link>
           </li>
         ))}

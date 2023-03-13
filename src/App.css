@@ -1,21 +1,55 @@
-body{
-    margin: 0;
+#root{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10000px;
+    width: 100vw;
 }
-.container {
-    max-width: 1200px;
-    padding: 0 20px;
+.container{
     height: 100%;
-    
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
     font-size: 28px;
     font-weight: 800;
     text-align: center;
+    margin-top: 50px;
+    margin-left: 150px;
+
+}
+.container button{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 120px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+
 }
 .dark-mode {
-    background-color: #202c37;
+    background-color: rgb(28, 28, 28);
     color: #fff;
 }
 
+.dark-mode .header  {
+    background-color: black;
+    color: #fff;
+}
+
+.dark-mode h1  {
+    background-color: black;
+    color: #fff;
+}
+.dark-mode button  {
+    background-color: white;
+    color: black;
+}
 
