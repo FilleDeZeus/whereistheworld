@@ -42,7 +42,7 @@ export const Home = () => {
     //represente les pays qui ont la meme region que le choix
     trie = filtreLesPays.filter(pays => pays.region === choix);
   }
-  //creation du varable qui va stocker les continents des pays en excluant les vide
+  //creation du varable qui va stocker les continents des pays 
   const continent = [...new Set(lesPays.map(pays => pays.region))].filter(region => region !== "");
 
   return (
